@@ -124,6 +124,12 @@ el skill.
 - **Precio.** En `~/.claude/skills/propuestas/mi-negocio.md` figura "Sitios Web Corporativos — desde USD 300". Lo que produce este skill (web + 8 páginas + panel + turnero) no entra en ese número, y contradice el objetivo de no competir por precio.
 - **El panel real.** Requiere Supabase (base de datos + login). Es un segundo producto, se construye cuando alguien lo pague.
 - **Deploy.** Por ahora todo local, a pedido de Ian. No hay interés en deployar las demos todavía.
+- **Versión autocontenida para el celular.** Planteada, no decidida. Hoy, para ver la demo en el
+  celular hace falta una red local entre celu y PC (alcanza el hotspot del celular, no consume
+  datos). Una versión con fotos y fuentes incrustadas en base64 (~2.3 MB) se abriría sola en
+  cualquier celular y se podría mandar por WhatsApp al prospecto. La decisión pendiente es si va
+  en un solo archivo (todo en una página, con anclas) o en nueve autocontenidos (~20 MB, mantiene
+  la estructura de sitio). **En la notebook no hace falta nada: modo avión y doble clic ya anda.**
 
 ---
 
