@@ -30,9 +30,13 @@ Desde el celular:  http://192.168.1.12:8777/demo-odontologia/index.html
 Para verlo en el celular, **la PC y el celular tienen que estar en el mismo WiFi**. No hace falta
 que ese WiFi tenga internet: alcanza con que los dos estén colgados de la misma red.
 
-> **La primera vez, Windows va a preguntar** si permitís que Python acepte conexiones.
-> Hay que decirle que sí, y tildar **"Redes privadas"**. Si le decís que no, el celular no va a
-> poder entrar y hay que habilitarlo después a mano en el Firewall de Windows.
+> **Sobre el firewall:** en tu PC ya está permitido — hay reglas de entrada para Python activas en
+> el perfil **Público**, y tu WiFi (`Personal-WiFi-D6F 2`) está catalogado como Público. Debería
+> andar sin tocar nada.
+>
+> Si alguna vez te conectás a otra red y el celular no entra, es porque Windows la catalogó como
+> **Privada** y las reglas no la cubren. Cuando aparezca el cartel de Windows preguntando, tildá
+> **las dos** casillas (privadas y públicas) y listo.
 
 Para cortar el servidor: `Ctrl+C` en la ventana negra, o cerrala.
 
