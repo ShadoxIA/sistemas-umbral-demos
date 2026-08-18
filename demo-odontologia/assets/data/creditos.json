@@ -1,0 +1,79 @@
+[
+  {
+    "archivo": "banda.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1629909613654-28e377c37b09",
+    "url": "https://unsplash.com/photos/1629909613654-28e377c37b09",
+    "desc": "Consulta dental moderna"
+  },
+  {
+    "archivo": "clinica.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1643660526741-094639fbe53a",
+    "url": "https://unsplash.com/photos/1643660526741-094639fbe53a",
+    "desc": "Sala de atencion"
+  },
+  {
+    "archivo": "srv-chequeo.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1667133295315-820bb6481730",
+    "url": "https://unsplash.com/photos/1667133295315-820bb6481730",
+    "desc": "Chequeo con escaner"
+  },
+  {
+    "archivo": "srv-implante.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1593022356769-11f762e25ed9",
+    "url": "https://unsplash.com/photos/1593022356769-11f762e25ed9",
+    "desc": "Modelo de implante"
+  },
+  {
+    "archivo": "srv-ortodoncia.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1564420228450-d9a5bc8d6565",
+    "url": "https://unsplash.com/photos/1564420228450-d9a5bc8d6565",
+    "desc": "Alineadores transparentes"
+  },
+  {
+    "archivo": "srv-estetica.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1489278353717-f64c6ee8a4d2",
+    "url": "https://unsplash.com/photos/1489278353717-f64c6ee8a4d2",
+    "desc": "Sonrisa natural"
+  },
+  {
+    "archivo": "srv-urgencia.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1606811856475-5e6fcdc6e509",
+    "url": "https://unsplash.com/photos/1606811856475-5e6fcdc6e509",
+    "desc": "Instrumental esteril"
+  },
+  {
+    "archivo": "srv-diagnostico.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1600170311833-c2cf5280ce49",
+    "url": "https://unsplash.com/photos/1600170311833-c2cf5280ce49",
+    "desc": "Tomografia dental"
+  },
+  {
+    "archivo": "equipo-1.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1706565029539-d09af5896340",
+    "url": "https://unsplash.com/photos/1706565029539-d09af5896340",
+    "desc": "Profesional 1"
+  },
+  {
+    "archivo": "equipo-2.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1667133295308-9ef24f71952e",
+    "url": "https://unsplash.com/photos/1667133295308-9ef24f71952e",
+    "desc": "Profesional 2"
+  },
+  {
+    "archivo": "equipo-3.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1662837775286-7e6258c7c595",
+    "url": "https://unsplash.com/photos/1662837775286-7e6258c7c595",
+    "desc": "Profesional 3"
+  }
+]

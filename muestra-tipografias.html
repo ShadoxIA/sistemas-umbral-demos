@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistemas Umbral — Las cinco parejas tipográficas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Archivo:wdth,wght@62..125,400..700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  *{margin:0}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:#0A0A0C;color:#ECECF1;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+
+  /* ---------- Portada ---------- */
+  .cover{
+    padding:clamp(56px,10vw,120px) clamp(20px,5vw,64px) clamp(40px,7vw,80px);
+    border-bottom:1px solid rgba(255,255,255,.11);
+    max-width:1100px;
+  }
+  .cover .kicker{
+    font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;
+    color:#8B31FF;font-weight:600;margin-bottom:20px;
+  }
+  .cover h1{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:clamp(2.1rem,6vw,4.2rem);line-height:.98;letter-spacing:-.03em;
+    color:#fff;text-transform:uppercase;margin-bottom:24px;
+  }
+  .cover p{color:#9A9AA6;font-size:clamp(1rem,1.5vw,1.15rem);max-width:62ch}
+  .cover p + p{margin-top:14px}
+  .cover b{color:#ECECF1;font-weight:600}
+
+  /* ---------- Bloque de pareja ---------- */
+  .pair{padding:clamp(52px,8vw,104px) clamp(20px,5vw,64px)}
+  .pair__inner{max-width:1100px;margin-inline:auto}
+
+  .pair--dark{background:#0A0A0C;color:#ECECF1}
+  .pair--light{background:#FAFAF7;color:#3A3A42}
+
+  .meta{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 18px;
+    padding-bottom:18px;margin-bottom:clamp(32px,5vw,52px);
+    border-bottom:1px solid currentColor;
+  }
+  .pair--dark .meta{border-color:rgba(255,255,255,.14)}
+  .pair--light .meta{border-color:rgba(0,0,0,.13)}
+  .meta__name{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:1.02rem;
+    letter-spacing:-.01em;
+  }
+  .pair--dark .meta__name{color:#fff}
+  .pair--light .meta__name{color:#0A0A0C}
+  .meta__nichos{font-size:.87rem;opacity:.62}
+  .meta__spec{
+    margin-left:auto;font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;
+    opacity:.5;font-weight:500;
+  }
+
+  /* mini-hero */
+  .eyebrow{
+    display:inline-block;font-size:.73rem;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;margin-bottom:22px;
+  }
+  .title{
+    line-height:.94;letter-spacing:-.028em;margin-bottom:26px;
+    max-width:16ch;
+  }
+  .lead{font-size:clamp(1rem,1.35vw,1.14rem);max-width:52ch;opacity:.72}
+  .pair--light .lead{opacity:.78}
+
+  .cta{
+    display:inline-flex;align-items:center;gap:10px;
+    margin-top:30px;padding:14px 26px;border-radius:5px;
+    font-weight:600;font-size:.95rem;color:#fff;
+    transition:transform .25s cubic-bezier(.16,.84,.34,1),box-shadow .25s;
+    cursor:default;
+  }
+  .cta .chev{transition:transform .25s cubic-bezier(.16,.84,.34,1);font-size:1.15em;line-height:1}
+  .cta:hover{transform:translateY(-2px)}
+  .cta:hover .chev{transform:translateX(3px)}
+
+  /* muestrario de letras */
+  .specimen{
+    margin-top:clamp(34px,5vw,54px);padding-top:26px;
+    border-top:1px solid;display:grid;gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+  }
+  .pair--dark .specimen{border-color:rgba(255,255,255,.11)}
+  .pair--light .specimen{border-color:rgba(0,0,0,.1)}
+  .specimen__label{
+    font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;
+    opacity:.45;font-weight:600;margin-bottom:9px;
+  }
+  .specimen__glyphs{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.25;letter-spacing:-.015em}
+  .specimen__body{font-family:'Inter',sans-serif;font-size:.95rem;opacity:.7;line-height:1.62}
+
+  /* --- Pareja 1 · MOTOR --- */
+  #motor{--acc:#B8F224}
+  #motor .title{
+    font-family:'Archivo',sans-serif;font-weight:700;font-stretch:125%;
+    text-transform:uppercase;max-width:13ch;
+    font-size:clamp(1.95rem,6.1vw,4.4rem);color:#fff;letter-spacing:-.025em;
+  }
+  #motor .specimen__glyphs{
+    font-family:'Archivo',sans-serif;font-weight:700;font-stretch:125%;text-transform:uppercase;
+    font-size:clamp(1.3rem,2.2vw,1.7rem);
+  }
+
+  /* --- Pareja 2 · BISTURÍ --- */
+  #bisturi{--acc:#0E7C6B}
+  #bisturi .title{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2.2rem,6.4vw,4.5rem);color:#0A0A0C;letter-spacing:-.022em;
+  }
+  #bisturi .specimen__glyphs{font-family:'Fraunces',serif;font-weight:600}
+
+  /* --- Pareja 3 · MANTEL --- */
+  #mantel{--acc:#C9552D}
+  #mantel .title{
+    font-family:'Bodoni Moda',serif;font-weight:700;
+    font-size:clamp(2.3rem,6.8vw,4.9rem);color:#fff;letter-spacing:-.02em;
+  }
+  #mantel .specimen__glyphs{font-family:'Bodoni Moda',serif;font-weight:700}
+
+  /* --- Pareja 4 · ESCRITURA --- */
+  #escritura{--acc:#1F4E5F}
+  #escritura .title{
+    font-family:'Newsreader',serif;font-weight:600;
+    font-size:clamp(2.2rem,6.4vw,4.6rem);color:#0A0A0C;letter-spacing:-.018em;
+  }
+  #escritura .specimen__glyphs{font-family:'Newsreader',serif;font-weight:600}
+
+  /* --- Pareja 5 · TALLER --- */
+  #taller{--acc:#FFC300}
+  #taller .title{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:800;text-transform:uppercase;
+    font-size:clamp(2.1rem,6.6vw,4.7rem);color:#fff;letter-spacing:-.03em;line-height:.96;
+  }
+  #taller .specimen__glyphs{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;text-transform:uppercase}
+
+  .eyebrow,.accent{color:var(--acc)}
+  .cta{background:var(--acc)}
+  #motor .cta,#mantel .cta,#taller .cta{color:#0A0A0C}
+
+  /* ---------- Cierre ---------- */
+  .closing{
+    padding:clamp(52px,8vw,96px) clamp(20px,5vw,64px);
+    border-top:1px solid rgba(255,255,255,.11);max-width:1100px;
+  }
+  .closing h2{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;text-transform:uppercase;
+    font-size:clamp(1.5rem,3.4vw,2.4rem);color:#fff;letter-spacing:-.025em;
+    line-height:1.02;margin-bottom:24px;
+  }
+  .closing ul{list-style:none;padding:0;display:grid;gap:14px;max-width:70ch}
+  .closing li{display:flex;gap:12px;color:#9A9AA6}
+  .closing li::before{content:'›';color:#8B31FF;font-weight:700;flex:none;line-height:1.5}
+  .closing b{color:#ECECF1;font-weight:600}
+  .foot{
+    padding:22px clamp(20px,5vw,64px) 56px;color:#62626E;font-size:.8rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="kicker">Sistemas Umbral · sistema tipográfico</div>
+  <h1>Cinco parejas.<br>Una sola voz de fondo.</h1>
+  <p>Cada bloque es un pedazo de hero real, con el fondo y el acento que le tocan al rubro — no una lista de nombres de fuentes. Así se va a ver el titular más grande de cada web.</p>
+  <p><b>Lo que cambia:</b> la letra del titular, el fondo, el acento y la caja (mayúsculas o no). <b>Lo que nunca cambia:</b> Inter para todo el texto de lectura, y el chevron › al final del botón. Esa es la firma.</p>
+</header>
+
+<!-- 1 · MOTOR -->
+<section class="pair pair--dark" id="motor">
+  <div class="pair__inner">
+    <div class="meta">
+      <span class="meta__name">01 · Motor</span>
+      <span class="meta__nichos">Concesionaria · Gimnasio · Industria · Tecnología</span>
+      <span class="meta__spec">Archivo Expanded + Inter</span>
+    </div>
+    <div class="eyebrow">Concordia · Entre Ríos</div>
+    <h2 class="title">Tu próximo auto, elegido con la <span class="accent">cabeza fría.</span></h2>
+    <p class="lead">Usados seleccionados uno por uno: revisados, con papeles al día y garantía escrita. Financiación y toma de tu usado el mismo día.</p>
+    <span class="cta">Consultar por WhatsApp <span class="chev">›</span></span>
+    <div class="specimen">
+      <div>
+        <div class="specimen__label">Titular</div>
+        <div class="specimen__glyphs">Aa Gg Rr 0123<br>Ancha y con presencia</div>
+      </div>
+      <div>
+        <div class="specimen__label">Texto de lectura · Inter</div>
+        <div class="specimen__body">Es la misma letra estirada a lo ancho, como el lettering de los autos modernos en la tapa del baúl. Ocupa el renglón entero y se planta: se ve cara sin gritar. Pide titulares cortos, porque cada palabra pesa el doble de ancho.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · BISTURÍ -->
+<section class="pair pair--light" id="bisturi">
+  <div class="pair__inner">
+    <div class="meta">
+      <span class="meta__name">02 · Bisturí</span>
+      <span class="meta__nichos">Odontología · Estética · Salud</span>
+      <span class="meta__spec">Fraunces + Inter</span>
+    </div>
+    <div class="eyebrow">Consultorio en Concordia</div>
+    <h2 class="title">Venís sin miedo. Salís <span class="accent">sin dudas.</span></h2>
+    <p class="lead">Te explicamos qué necesitás, qué no, y cuánto sale — antes de sentarte en el sillón. Turnos que arrancan a horario y presupuesto por escrito.</p>
+    <span class="cta">Reservar turno <span class="chev">›</span></span>
+    <div class="specimen">
+      <div>
+        <div class="specimen__label">Titular</div>
+        <div class="specimen__glyphs">Aa Gg Rr 0123<br>Cálida y precisa</div>
+      </div>
+      <div>
+        <div class="specimen__label">Texto de lectura · Inter</div>
+        <div class="specimen__body">Es una serif suave, con remates redondeados. Da confianza de profesional sin la frialdad de hospital ni el azul institucional de siempre. Acá el titular va en caja mixta, no en mayúsculas: gritar no queda bien en salud.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · MANTEL -->
+<section class="pair pair--dark" id="mantel">
+  <div class="pair__inner">
+    <div class="meta">
+      <span class="meta__name">03 · Mantel</span>
+      <span class="meta__nichos">Restaurante · Café · Bar · Hotelería</span>
+      <span class="meta__spec">Bodoni Moda + Inter</span>
+    </div>
+    <div class="eyebrow">Costanera · Concordia</div>
+    <h2 class="title">Cocina de río, <span class="accent">mesa de barrio.</span></h2>
+    <p class="lead">Pescado del día, pastas hechas a la mañana y una carta corta que cambia cada semana. Reservás por WhatsApp y te guardamos la mesa de la ventana.</p>
+    <span class="cta">Reservar mesa <span class="chev">›</span></span>
+    <div class="specimen">
+      <div>
+        <div class="specimen__label">Titular</div>
+        <div class="specimen__glyphs">Aa Gg Rr 0123<br>Contraste de carta</div>
+      </div>
+      <div>
+        <div class="specimen__label">Texto de lectura · Inter</div>
+        <div class="specimen__body">Trazos muy finos contra trazos muy gruesos: es la letra de las cartas de los restaurantes buenos y de las revistas de moda. Sobre negro se luce el doble. Pide tamaño grande — en chico se rompe.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · ESCRITURA -->
+<section class="pair pair--light" id="escritura">
+  <div class="pair__inner">
+    <div class="meta">
+      <span class="meta__name">04 · Escritura</span>
+      <span class="meta__nichos">Inmobiliaria · Jurídico · Contable · Seguros</span>
+      <span class="meta__spec">Newsreader + Inter</span>
+    </div>
+    <div class="eyebrow">Propiedades en Entre Ríos</div>
+    <h2 class="title">Tu próxima casa ya está <span class="accent">publicada.</span></h2>
+    <p class="lead">Cincuenta y ocho propiedades con precio a la vista, papeles verificados y visitas que coordinamos en el día. Sin vueltas ni "consultar valor".</p>
+    <span class="cta">Ver propiedades <span class="chev">›</span></span>
+    <div class="specimen">
+      <div>
+        <div class="specimen__label">Titular</div>
+        <div class="specimen__glyphs">Aa Gg Rr 0123<br>Seria y legible</div>
+      </div>
+      <div>
+        <div class="specimen__label">Texto de lectura · Inter</div>
+        <div class="specimen__body">La letra del diario de calidad. Transmite que hay alguien serio del otro lado, que es exactamente lo que necesita quien está por firmar el papel más caro de su vida.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · TALLER -->
+<section class="pair pair--dark" id="taller">
+  <div class="pair__inner">
+    <div class="meta">
+      <span class="meta__name">05 · Taller</span>
+      <span class="meta__nichos">Construcción · Oficios · Servicios técnicos</span>
+      <span class="meta__spec">Bricolage Grotesque + Inter</span>
+    </div>
+    <div class="eyebrow">Obras en Concordia y zona</div>
+    <h2 class="title">Terminamos cuando dijimos <span class="accent">que terminamos.</span></h2>
+    <p class="lead">Presupuesto cerrado por escrito, fecha de entrega en el contrato y un responsable de obra al que le podés escribir directo. Sin sorpresas a mitad de camino.</p>
+    <span class="cta">Pedir presupuesto <span class="chev">›</span></span>
+    <div class="specimen">
+      <div>
+        <div class="specimen__label">Titular</div>
+        <div class="specimen__glyphs">Aa Gg Rr 0123<br>Maciza con oficio</div>
+      </div>
+      <div>
+        <div class="specimen__label">Texto de lectura · Inter</div>
+        <div class="specimen__body">Tiene el peso de la anterior pero con detalles raros y hechos a mano en los remates: se siente construida, no estampada. Es maciza sin volverse gritona, que era justo el problema.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>Segunda vuelta · qué cambió</h2>
+  <ul>
+    <li><b>Motor</b> pasó de Space Grotesk a <b>Archivo Expanded</b>, y de violeta a <b>lima ácido</b>. La letra estirada a lo ancho tiene presencia de marca de auto; el violeta se va porque es el color de tu agencia, no el de la concesionaria.</li>
+    <li><b>Taller</b> pasó de Archivo Black a <b>Bricolage Grotesque</b>, y de naranja a <b>amarillo de obra</b>. Misma contundencia, pero con remates hechos a mano en vez de bloque estampado. El naranja salía además demasiado cerca de la terracota de Mantel.</li>
+    <li><b>Los cinco acentos, sin repetirse:</b> lima ácido, verde clínico, terracota, azul petróleo y amarillo de obra. Ningún azul corporativo, ningún rojo.</li>
+    <li><b>Space Grotesk no desaparece:</b> queda como la letra de Sistemas Umbral — la de esta misma página y la de tus propuestas. Deja de ser una opción para clientes y pasa a ser tuya.</li>
+  </ul>
+</section>
+
+<div class="foot">Sistemas Umbral · muestra interna de trabajo · 18/08/2026</div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tratamiento — Ribera Odontología</title>
+<meta name="description" content="Detalle del tratamiento: qué incluye, cuánto dura, cuánto sale y las preguntas que nos hacen siempre.">
+<meta name="robots" content="noindex, nofollow">
+<script>document.documentElement.className='js';</script>
+<link rel="stylesheet" href="assets/fonts/fuentes.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body id="top">
+
+<!-- ===================== HEADER ===================== -->
+<header class="header header--interna">
+  <div class="container header__inner">
+    <a href="index.html" class="brand" aria-label="Ribera Odontología — inicio">
+      <svg class="brand__mark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="32" height="32" rx="7" stroke="#0E7C6B" stroke-width="1.6"/>
+        <path d="M13 10l7 7-7 7" stroke="#0E7C6B" stroke-width="2.6" stroke-linecap="square"/>
+      </svg>
+      <span class="brand__name">Ribera<span>Odontología</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">El consultorio</a>
+      <a href="tratamientos.html">Tratamientos</a>
+      <a href="equipo.html">Equipo</a>
+      <div class="nav__drop">
+        <button aria-expanded="false">Pacientes <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="nav__menu">
+          <a href="cobertura.html">Cobertura médica</a>
+          <a href="preguntas.html">Preguntas frecuentes</a>
+          <a href="turnos.html">Turnos online</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="header__acciones">
+      <a class="btn btn-ghost btn-sm" data-wa="Tengo una urgencia y necesito que me atiendan hoy.">Urgencias</a>
+      <button class="btn btn-primary btn-sm header__cta" data-turno="Chequeo y limpieza">
+        Reservar turno <span class="chev">›</span>
+      </button>
+    </div>
+
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="nosotros.html">El consultorio</a>
+  <a href="tratamientos.html">Tratamientos</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="cobertura.html">Cobertura médica</a>
+  <a href="preguntas.html">Preguntas frecuentes</a>
+  <a href="turnos.html">Turnos online</a>
+  <a href="contacto.html">Contacto</a>
+  <a class="btn btn-ghost btn-block" style="margin-top:24px" data-wa="Tengo una urgencia y necesito que me atiendan hoy.">Urgencias</a>
+  <button class="btn btn-primary btn-block" style="margin-top:10px" data-turno="Chequeo y limpieza">Reservar turno <span class="chev">›</span></button>
+</div>
+
+<!-- ===================== DETALLE ===================== -->
+<main class="detail">
+  <div class="container">
+    <nav class="crumbs" aria-label="Miga de pan">
+      <a href="index.html">Inicio</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <a href="index.html#servicios">Tratamientos</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span id="crumb-actual">Tratamiento</span>
+    </nav>
+
+    <div id="detalle"></div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">También hacemos</span>
+        <h2 class="h-section">Otros tratamientos.</h2>
+      </div>
+      <div class="services__grid" id="otros-grid"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== CIERRE ===================== -->
+<section class="section closer">
+  <div class="container">
+    <div class="closer__box" data-reveal>
+      <div class="closer__texto">
+        <h2 class="h-section">Sacate la duda<br><span class="accent">en una consulta.</span></h2>
+        <p class="lead">Primera visita con radiografía incluida y presupuesto por escrito.</p>
+      </div>
+      <div class="closer__accion">
+        <button class="btn btn-primary" data-turno="Chequeo y limpieza">Reservar turno <span class="chev">›</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER (lo arma main.js desde negocio.js) ===================== -->
+<footer class="footer" data-footer></footer>
+
+<!-- Globo flotante: SOLO el ícono -->
+<a class="wa-float" data-wa="Quiero hacer una consulta." aria-label="Escribinos por WhatsApp">
+  <span class="wa-ico"></span>
+</a>
+
+<!-- Modal de reserva de turno (muestra: no guarda nada) -->
+<div class="modal" id="modal-turno" role="dialog" aria-modal="true" aria-labelledby="turno-titulo">
+  <div class="modal__box">
+    <div class="modal__head">
+      <div>
+        <span class="eyebrow">Reservar turno</span>
+        <h2 class="h-sub" id="turno-titulo" style="margin-top:8px">Elegí día y horario</h2>
+      </div>
+      <button class="modal__close" data-cerrar aria-label="Cerrar">×</button>
+    </div>
+
+    <div class="field">
+      <label for="turno-servicio">Tratamiento</label>
+      <select id="turno-servicio"></select>
+    </div>
+    <div class="field">
+      <label for="turno-fecha">Día</label>
+      <select id="turno-fecha"></select>
+    </div>
+    <div class="field">
+      <label>Horarios libres</label>
+      <div class="slots" id="turno-slots"></div>
+    </div>
+
+    <button class="btn btn-primary btn-block" id="turno-confirmar" style="margin-top:24px" disabled>
+      Confirmar por WhatsApp <span class="chev">›</span>
+    </button>
+    <p class="modal__note">
+      En la demo, confirmar abre WhatsApp con el turno ya escrito. En la versión contratada, el turno se
+      guarda solo y queda en el calendario del consultorio.
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/data/negocio.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
