@@ -1,0 +1,58 @@
+[
+  {
+    "archivo": "hero.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1588182657969-777d766e31ab",
+    "url": "https://unsplash.com/photos/1588182657969-777d766e31ab",
+    "desc": "Parrilla de carbón con llamas de noche"
+  },
+  {
+    "archivo": "salon.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1776993298456-98c71c0e177e",
+    "url": "https://unsplash.com/photos/1776993298456-98c71c0e177e",
+    "desc": "Comedor de restaurante con mesas tendidas"
+  },
+  {
+    "archivo": "plato-bife.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1614119068601-483274e9dcb7",
+    "url": "https://unsplash.com/photos/1614119068601-483274e9dcb7",
+    "desc": "Bife sellado a la parrilla sobre las llamas"
+  },
+  {
+    "archivo": "plato-asado.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1544025162-d76694265947",
+    "url": "https://unsplash.com/photos/1544025162-d76694265947",
+    "desc": "Costillar asado en tabla con guarniciones"
+  },
+  {
+    "archivo": "plato-provoleta.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1633857471930-bfa8d0be5e4a",
+    "url": "https://unsplash.com/photos/1633857471930-bfa8d0be5e4a",
+    "desc": "Queso a la parrilla con marcas de fuego"
+  },
+  {
+    "archivo": "equipo-1.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1689588532679-4bb5fdd8f6d5",
+    "url": "https://unsplash.com/photos/1689588532679-4bb5fdd8f6d5",
+    "desc": "Parrillero con delantal"
+  },
+  {
+    "archivo": "equipo-2.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1496811425508-6d7ebb7ff32c",
+    "url": "https://unsplash.com/photos/1496811425508-6d7ebb7ff32c",
+    "desc": "Jefa de salón con moño y delantal"
+  },
+  {
+    "archivo": "equipo-3.jpg",
+    "fuente": "Unsplash",
+    "id": "photo-1612715647398-a3719a3025ff",
+    "url": "https://unsplash.com/photos/1612715647398-a3719a3025ff",
+    "desc": "Cocinero frente al fuego"
+  }
+]

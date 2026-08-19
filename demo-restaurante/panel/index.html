@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel — Rescoldo</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/fonts/fuentes.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ BARRA LATERAL ============ -->
+  <aside class="side">
+    <a href="../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="32" height="32" rx="7" stroke="#E9A085" stroke-width="1.6"/>
+        <path d="M13 10l7 7-7 7" stroke="#E9A085" stroke-width="2.6" stroke-linecap="square"/>
+      </svg>
+      <span class="brand__name">Rescoldo<span>Panel</span></span>
+    </a>
+
+    <nav aria-label="Secciones del panel">
+      <button class="active" data-view="resumen" data-titulo="Resumen" data-sub="Cómo viene trabajando la web esta semana">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9M10 19V5M16 19v-6M22 19H2" stroke-linecap="round"/></svg>
+        Resumen
+      </button>
+      <button data-view="consultas" data-titulo="Consultas" data-sub="Los WhatsApp y reservas que entraron desde la web">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z" stroke-linejoin="round"/></svg>
+        Consultas
+      </button>
+      <button data-view="contenido" data-titulo="Contenido" data-sub="La carta, los precios y qué se muestra en la web">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16M4 12h16M4 19h10" stroke-linecap="round"/></svg>
+        La carta
+      </button>
+      <button data-view="reservas" data-titulo="Reservas" data-sub="Las mesas reservadas para hoy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round"/></svg>
+        Reservas
+      </button>
+    </nav>
+
+    <div class="side__foot">
+      Panel de demostración de<br><a href="../index.html">Sistemas Umbral</a><br>
+      Los datos son inventados.
+    </div>
+  </aside>
+
+  <!-- ============ CONTENIDO ============ -->
+  <main class="main">
+    <div class="main__head">
+      <div>
+        <h1 id="head-titulo">Resumen</h1>
+        <p id="head-sub">Cómo viene trabajando la web esta semana</p>
+      </div>
+      <span class="chip">Semana del 11 al 17 de agosto</span>
+    </div>
+
+    <div class="aviso">
+      <div><b>Esto es una maqueta.</b> Las pantallas son navegables y los datos son inventados: sirve para
+      mostrar cómo se vería el panel. El panel real, con datos de verdad y reservas que se guardan solas,
+      se construye cuando el restaurante contrata el servicio.</div>
+    </div>
+
+    <!-- ---------- RESUMEN ---------- -->
+    <section class="view active" id="view-resumen">
+      <div class="grid grid--kpi">
+        <div class="kpi">
+          <div class="kpi__label">Visitas</div>
+          <div class="kpi__n">1.192</div>
+          <div class="kpi__delta up">▲ 22% vs. semana pasada</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">Consultas por WhatsApp</div>
+          <div class="kpi__n">54</div>
+          <div class="kpi__delta up">▲ 11% vs. semana pasada</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">Reservas del finde</div>
+          <div class="kpi__n">38</div>
+          <div class="kpi__delta up">▲ 6 reservas</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">De visita a reserva</div>
+          <div class="kpi__n">4,5%</div>
+          <div class="kpi__delta up">▲ 0,6 puntos</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__head">
+          <h2>Visitas por día</h2>
+          <small>El sábado es el día fuerte: conviene publicar los jueves</small>
+        </div>
+        <svg class="chart" id="chart-visitas" role="img" aria-label="Gráfico de visitas por día"></svg>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <div class="card__head"><h2>Lo que más miran</h2><small>Últimos 30 días</small></div>
+          <ul class="rank" id="rank-vistos"></ul>
+        </div>
+        <div class="card">
+          <div class="card__head"><h2>De dónde vienen</h2><small>Últimos 30 días</small></div>
+          <ul class="rank">
+            <li><div class="rank__top"><b>Google</b><span>49%</span></div><div class="rank__bar"><i style="width:49%"></i></div></li>
+            <li><div class="rank__top"><b>Instagram</b><span>33%</span></div><div class="rank__bar"><i style="width:33%"></i></div></li>
+            <li><div class="rank__top"><b>Directo (alguien pasó el link)</b><span>12%</span></div><div class="rank__bar"><i style="width:12%"></i></div></li>
+            <li><div class="rank__top"><b>Facebook</b><span>6%</span></div><div class="rank__bar"><i style="width:6%"></i></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CONSULTAS ---------- -->
+    <section class="view" id="view-consultas">
+      <div class="card">
+        <div class="card__head">
+          <h2>Consultas recibidas</h2>
+          <small>Sabés qué estaba mirando cada uno antes de escribir</small>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr><th>Cliente</th><th>Consulta</th><th>Mensaje</th><th>Estado</th><th></th></tr>
+          </thead>
+          <tbody id="tbl-consultas"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---------- CONTENIDO ---------- -->
+    <section class="view" id="view-contenido">
+      <div class="card">
+        <div class="card__head">
+          <h2>La carta y los precios</h2>
+          <small id="guardado" style="opacity:0;transition:opacity .3s;color:var(--clay);font-weight:600"></small>
+        </div>
+        <div class="edit-row" style="border-bottom:1px solid var(--line-2);padding-bottom:10px">
+          <span style="font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)">Plato</span>
+          <span style="font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)">Precio</span>
+          <span style="font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)">Categoría</span>
+          <span style="font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)">Carta</span>
+        </div>
+        <div id="lista-contenido"></div>
+      </div>
+    </section>
+
+    <!-- ---------- RESERVAS ---------- -->
+    <section class="view" id="view-reservas">
+      <div class="card">
+        <div class="card__head">
+          <h2>Reservas de hoy</h2>
+          <small>Los huecos libres son los que ve el comensal en la web</small>
+        </div>
+        <div class="agenda" id="agenda-hoy"></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="../assets/data/negocio.js"></script>
+<script src="../assets/js/panel.js"></script>
+</body>
+</html>

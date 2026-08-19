@@ -99,10 +99,28 @@ La pieza 5 cambia de forma según lo que el negocio vende. Hay **tres formas**, 
 |---|---|---|
 | **Catálogo** | Concesionaria, inmobiliaria, tienda | Grilla de fichas con foto, precio y tres datos. Filtros arriba. Cada ficha lleva a su página. |
 | **Servicios** | Odontología, estética, gimnasio, estudios profesionales | Lista de servicios con qué incluye, cuánto sale y cuánto dura. Cada uno lleva a su página con el detalle y el paso a paso. |
-| **Carta** | Restaurante, café, bar | Menú por categorías, con foto solo en los platos estrella. Precio siempre visible. |
+| **Carta** | Restaurante, café, bar | **Menú digital**: categorías con precio siempre visible. Cada plato con dos botones — *Más info* (abre la ficha en un modal, sin salir de la carta) y *Pedir* (lo suma a la comanda: delivery o take away, por WhatsApp). Foto por plato, opcional (la carga el dueño). |
 
 Ningún nicho combina dos formas. Si un negocio vende productos *y* servicios, gana el que le da de
 comer: se elige uno y el otro va como sección secundaria.
+
+**La forma Carta es un menú digital, no un catálogo de e-commerce** (aprendido en la demo de Rescoldo):
+
+- **La carta es la entrada.** El dueño la linkea en Instagram/Google y la gente cae directo ahí, no en
+  la home. Tiene que pararse sola y dejar claro a primera vista que se puede *ver* y *pedir*.
+- **Nada de hover como única pista.** Se ve en el celular: la acción va en **botones explícitos**, no en
+  "tocá la fila". La ficha del plato abre en **modal** (nunca una página tipo producto: eso se siente
+  tienda online).
+- **El pedido es una comanda, no un changuito.** *Pedir* (en la carta) o *Agregar al pedido* (en la ficha)
+  **solo suman** el plato y avisan con un toast; no abren nada. Una **barra flotante** muestra el resumen y
+  abre la comanda, que se toca cuando el cliente terminó de elegir. La comanda tiene los platos con
+  cantidad, el **modo de entrega** (delivery / take away — el take away no pide dirección, muestra la del
+  local), los **datos** y el **medio de pago** (efectivo / el que use el negocio). Todo sale en **un solo
+  mensaje de WhatsApp** para que quien atiende solo confirme. Lenguaje de restaurante ("Tu pedido", "Enviar
+  por WhatsApp"), nunca "carrito/checkout/pagar". Sin pasarela: el pago se coordina en la entrega.
+- **Comer en el salón vs. pedir** conviven: en la ficha, *Agregar al pedido* arma la comanda; *Comer acá*
+  queda como gancho para definir con el cliente (mostrar al mozo, o mandar el pedido de mesa al panel de
+  recepción). La reserva de mesa vive en la web, **no** en el plato.
 
 ---
 
@@ -157,6 +175,23 @@ En la demo de odontología el primer intento (3 stops, copiando la referencia ta
 
 **Lo que sigue prohibido** es el velo **neutro** — negro o gris — con texto centrado: esa es la receta
 de plantilla. Teñir con el acento y alinear a la izquierda es lo contrario.
+
+### 3.2 El encabezado de página interna
+
+El encabezado de cada página interna (`.pagehero`: miga de pan, eyebrow, titular, lead) **lleva el mismo
+lavado del hero** (§3.1), no una banda de color plano. Una banda plana `--paper-2` se ve muerta —
+sobre base oscura queda "toda negra", sobre base clara pasa más desapercibida pero igual apaga la página.
+
+La receta:
+- Una **foto de fondo distinta por sección** (`.pagehero--<slug>`, imagen por CSS), para que no sea siempre
+  la misma banda. Se reusan fotos que ya están en la demo; alcanza con que cada sección tenga la suya, no
+  hace falta una foto nueva. Repetir una foto entre dos secciones es aceptable.
+- El **mismo velo de acento** del hero por encima (en `::after`), y el texto al frente en blanco + eyebrow
+  en el tono claro del acento. La miga de pan sube a blanco tenue (el gris `--fog` no se lee sobre el velo).
+
+Es menos crítico que el hero —no hay lista a la derecha— así que el mismo gradiente del hero alcanza sin
+volver a medir. Regla: **ninguna sección interna queda como color plano.** Vale para todos los nichos, no
+solo los de base oscura.
 
 ---
 

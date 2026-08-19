@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preguntas frecuentes — Rescoldo Parrilla</title>
+<meta name="description" content="Reservas, opciones sin TACC y vegetarianas, chicos, delivery, estacionamiento y grupos. Las preguntas de siempre, respondidas.">
+<meta name="robots" content="noindex, nofollow">
+<script>document.documentElement.className='js';</script>
+<link rel="stylesheet" href="assets/fonts/fuentes.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body id="top">
+
+<header class="header header--interna">
+  <div class="container header__inner">
+    <a href="index.html" class="brand" aria-label="Rescoldo Parrilla — inicio">
+      <svg class="brand__mark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="32" height="32" rx="7" stroke="#C9552D" stroke-width="1.6"/>
+        <path d="M13 10l7 7-7 7" stroke="#C9552D" stroke-width="2.6" stroke-linecap="square"/>
+      </svg>
+      <span class="brand__name">Rescoldo<span>Parrilla</span></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">El restaurante</a>
+      <a href="carta.html">La carta</a>
+      <a href="equipo.html">Equipo</a>
+      <div class="nav__drop">
+        <button aria-expanded="false">Comensales <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="nav__menu">
+          <a href="formas-pago.html">Formas de pago</a>
+          <a href="preguntas.html" aria-current="page">Preguntas frecuentes</a>
+          <a href="reservas.html">Reservar mesa</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="header__acciones">
+      <a class="btn btn-ghost btn-sm" href="carta.html">Pedir online</a>
+      <button class="btn btn-primary btn-sm header__cta" data-reserva>Reservar mesa <span class="chev">›</span></button>
+    </div>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="nosotros.html">El restaurante</a>
+  <a href="carta.html">La carta</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="formas-pago.html">Formas de pago</a>
+  <a href="preguntas.html">Preguntas frecuentes</a>
+  <a href="reservas.html">Reservar mesa</a>
+  <a href="contacto.html">Contacto</a>
+  <a class="btn btn-ghost btn-block" style="margin-top:24px" href="carta.html">Pedir online</a>
+  <button class="btn btn-primary btn-block" style="margin-top:10px" data-reserva>Reservar mesa <span class="chev">›</span></button>
+</div>
+
+<section class="pagehero pagehero--preguntas">
+  <div class="container">
+    <nav class="crumbs" aria-label="Miga de pan">
+      <a href="index.html">Inicio</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span>Preguntas frecuentes</span>
+    </nav>
+    <span class="eyebrow">Preguntas frecuentes</span>
+    <h1>Lo que nos<br>preguntan siempre.</h1>
+    <p class="lead">Y si te queda una duda que no está acá, escribinos por WhatsApp: contestamos rápido.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:860px">
+    <div class="faq" id="faq-general"></div>
+  </div>
+</section>
+
+<section class="section closer">
+  <div class="container">
+    <div class="closer__box" data-reveal>
+      <div class="closer__texto">
+        <h2 class="h-section">¿Prendemos la parrilla<br>para <span class="accent">tu mesa?</span></h2>
+        <p class="lead">Reservá en un minuto. Te esperamos con la mesa lista y el fuego a punto.</p>
+      </div>
+      <div class="closer__accion">
+        <button class="btn btn-primary" data-reserva>Reservar mesa <span class="chev">›</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" data-footer></footer>
+
+<a class="wa-float" data-wa="Quiero hacer una consulta." aria-label="Escribinos por WhatsApp">
+  <span class="wa-ico"></span>
+</a>
+
+<div class="modal" id="modal-reserva" role="dialog" aria-modal="true" aria-labelledby="reserva-titulo">
+  <div class="modal__box">
+    <div class="modal__head">
+      <div>
+        <span class="eyebrow">Reservar mesa</span>
+        <h2 class="h-sub" id="reserva-titulo" style="margin-top:8px">Elegí día, hora y comensales</h2>
+      </div>
+      <button class="modal__close" data-cerrar aria-label="Cerrar">×</button>
+    </div>
+    <div class="field">
+      <label for="reserva-personas">Comensales</label>
+      <select id="reserva-personas">
+        <option value="1 persona">1 persona</option>
+        <option value="2 personas" selected>2 personas</option>
+        <option value="3 personas">3 personas</option>
+        <option value="4 personas">4 personas</option>
+        <option value="5 personas">5 personas</option>
+        <option value="6 personas">6 personas</option>
+        <option value="8 personas">8 personas</option>
+        <option value="10 personas">10 personas</option>
+        <option value="más de 10 (grupo)">Más de 10 (grupo)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="reserva-fecha">Día</label>
+      <select id="reserva-fecha"></select>
+    </div>
+    <div class="field">
+      <label>Horarios libres</label>
+      <div class="slots" id="reserva-slots"></div>
+    </div>
+    <button class="btn btn-primary btn-block" id="reserva-confirmar" style="margin-top:24px" disabled>
+      Confirmar por WhatsApp <span class="chev">›</span>
+    </button>
+    <p class="modal__note">
+      En la demo, confirmar abre WhatsApp con la reserva ya escrita. En la versión contratada, la mesa se
+      guarda sola y queda en la agenda del restaurante.
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/data/negocio.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
