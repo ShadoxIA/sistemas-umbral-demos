@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotizá tu auto — Litoral Automotores</title>
+<meta name="description" content="Cotizá online en un minuto: entregá tu usado como parte de pago, financiá el auto en cuotas o vendé tu usado. Un aproximado al instante, sin esperar.">
+<meta name="robots" content="noindex, nofollow">
+<script>document.documentElement.className='js';</script>
+<link rel="stylesheet" href="assets/fonts/fuentes.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body id="top">
+
+<header class="header header--interna">
+  <div class="container header__inner">
+    <a href="index.html" class="brand" aria-label="Litoral Automotores — inicio">
+      <svg class="brand__mark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="32" height="32" rx="7" stroke="#B8F224" stroke-width="1.6"/>
+        <path d="M13 10l7 7-7 7" stroke="#B8F224" stroke-width="2.6" stroke-linecap="square"/>
+      </svg>
+      <span class="brand__name">Litoral<span>Automotores</span></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="equipo.html">Equipo</a>
+      <div class="nav__drop">
+        <button aria-expanded="false">Clientes <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="nav__menu">
+          <a href="financiacion.html">Financiación</a>
+          <a href="preguntas.html">Preguntas frecuentes</a>
+          <a href="cotiza.html" aria-current="page">Cotizá tu usado</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="header__acciones">
+      <a class="btn btn-ghost btn-sm" data-wa="Quiero que un asesor me contacte.">Hablá con un asesor</a>
+      <a class="btn btn-primary btn-sm header__cta" href="catalogo.html">Ver catálogo <span class="chev">›</span></a>
+    </div>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="catalogo.html">Catálogo</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="financiacion.html">Financiación</a>
+  <a href="preguntas.html">Preguntas frecuentes</a>
+  <a href="cotiza.html">Cotizá tu usado</a>
+  <a href="contacto.html">Contacto</a>
+  <a class="btn btn-ghost btn-block" style="margin-top:24px" data-wa="Quiero que un asesor me contacte.">Hablá con un asesor</a>
+  <a class="btn btn-primary btn-block" style="margin-top:10px" href="catalogo.html">Ver catálogo <span class="chev">›</span></a>
+</div>
+
+<section class="pagehero pagehero--cotiza">
+  <div class="container">
+    <nav class="crumbs" aria-label="Miga de pan">
+      <a href="index.html">Inicio</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span>Cotizá tu auto</span>
+    </nav>
+    <span class="eyebrow">Cotizador online</span>
+    <h1>Sabé cuánto sale,<br>antes de venir.</h1>
+    <p class="lead">Entregá tu usado como parte de pago, financiá el auto en cuotas o vendé tu usado. Te damos un número aproximado al instante y coordinás el resto por WhatsApp.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- El cotizador lo arma main.js desde negocio.js (parámetros editables). -->
+    <div id="cotizador"></div>
+    <p class="cotiz__nota" style="margin-top:26px">
+      La tasación la calcula la web con la marca, el modelo, el año y los kilómetros —vos no ponés el
+      precio— y asume el auto en <b>excelente estado</b>. Es un valor aproximado y generoso: el número
+      final lo cerramos al revisar la unidad en el local. En la demo los valores de mercado son ficticios;
+      en la versión contratada el dueño los configura desde el panel.
+    </p>
+  </div>
+</section>
+
+<footer class="footer" data-footer></footer>
+
+<a class="wa-float" data-wa="Quiero hacer una consulta." aria-label="Escribinos por WhatsApp">
+  <span class="wa-ico"></span>
+</a>
+
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/data/negocio.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

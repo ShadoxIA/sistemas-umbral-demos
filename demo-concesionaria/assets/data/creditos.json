@@ -1,0 +1,16 @@
+[
+  { "archivo": "hero.jpg",         "fuente": "Unsplash", "id": "photo-1551830820-330a71b99659", "url": "https://unsplash.com/photos/1551830820-330a71b99659", "desc": "Pickup Ford F-150 al atardecer" },
+  { "archivo": "showroom.jpg",     "fuente": "Unsplash", "id": "photo-1643142314913-0cf633d9bbb5", "url": "https://unsplash.com/photos/1643142314913-0cf633d9bbb5", "desc": "Auto en el salón de ventas de una concesionaria" },
+  { "archivo": "interior.jpg",     "fuente": "Unsplash", "id": "photo-1547731269-e4073e054f12", "url": "https://unsplash.com/photos/1547731269-e4073e054f12", "desc": "Interior de cuero de un sedán premium" },
+  { "archivo": "auto-ram.jpg",     "fuente": "Unsplash", "id": "photo-1649793395985-967862a3b73f", "url": "https://unsplash.com/photos/1649793395985-967862a3b73f", "desc": "Pickup RAM 1500 al anochecer" },
+  { "archivo": "auto-rav4.jpg",    "fuente": "Unsplash", "id": "photo-1622210642960-0f6a2cdbdc9f", "url": "https://unsplash.com/photos/1622210642960-0f6a2cdbdc9f", "desc": "SUV Toyota RAV4 blanca sobre fondo oscuro" },
+  { "archivo": "auto-serie5.jpg",  "fuente": "Unsplash", "id": "photo-1546614042-7df3c24c9e5d", "url": "https://unsplash.com/photos/1546614042-7df3c24c9e5d", "desc": "Sedán BMW Serie 5 negro" },
+  { "archivo": "auto-hilux.jpg",   "fuente": "Unsplash", "id": "photo-1559416523-140ddc3d238c", "url": "https://unsplash.com/photos/1559416523-140ddc3d238c", "desc": "Pickup Toyota 4x4 en el campo" },
+  { "archivo": "auto-macan.jpg",   "fuente": "Unsplash", "id": "photo-1615836426606-c16238a6bfb4", "url": "https://unsplash.com/photos/1615836426606-c16238a6bfb4", "desc": "SUV Porsche Macan blanca" },
+  { "archivo": "auto-serie4.jpg",  "fuente": "Unsplash", "id": "photo-1441148489547-da3f133be9ae", "url": "https://unsplash.com/photos/1441148489547-da3f133be9ae", "desc": "Coupé BMW gris, tres cuartos trasero" },
+  { "archivo": "auto-compass.jpg", "fuente": "Unsplash", "id": "photo-1639280791656-5f8506ff21d2", "url": "https://unsplash.com/photos/1639280791656-5f8506ff21d2", "desc": "SUV Jeep Compass en ruta al atardecer" },
+  { "archivo": "auto-i30.jpg",     "fuente": "Unsplash", "id": "photo-1550355291-bbee04a92027", "url": "https://unsplash.com/photos/1550355291-bbee04a92027", "desc": "Hatchback Hyundai i30 rojo, frente" },
+  { "archivo": "equipo-1.jpg",     "fuente": "Unsplash", "id": "photo-1500648767791-00dcc994a43e", "url": "https://unsplash.com/photos/1500648767791-00dcc994a43e", "desc": "Vendedor con saco, retrato" },
+  { "archivo": "equipo-2.jpg",     "fuente": "Unsplash", "id": "photo-1609436132311-e4b0c9370469", "url": "https://unsplash.com/photos/1609436132311-e4b0c9370469", "desc": "Vendedora con saco, retrato" },
+  { "archivo": "equipo-3.jpg",     "fuente": "Unsplash", "id": "photo-1507003211169-0a1dd7228f2d", "url": "https://unsplash.com/photos/1507003211169-0a1dd7228f2d", "desc": "Asesor sonriendo, retrato" }
+]

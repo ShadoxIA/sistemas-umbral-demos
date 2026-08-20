@@ -7,13 +7,13 @@
 - **Dónde está todo:** demos golden a mano en `demo-odontologia/` y `demo-restaurante/`.
   El diseño es fijo y vive en `estilo-umbral.md` (ADN v2.2) — **no lo leas entero: es el árbitro
   ante una duda.** Consultá solo la sección que tu tarea toque (§ del ADN citada abajo).
-- **Estado en una línea:** demo #2 (odontología) y demo #3 (restaurante Rescoldo) **cerradas y commiteadas**,
-  alineadas al ADN v2.2. Restaurante = **menú digital** con pedido de delivery por WhatsApp. Próximo:
-  la web **Motor** (concesionaria, Litoral Automotores) — **todavía NO está en este repo**, se construye/
-  regenera al ADN v2.2. Skill aún no extraído.
-- **Tarea activa (próximo chat):** **construir la demo del nicho concesionaria** (pareja **Motor**: Archivo
-  Expanded + Inter, base OSCURA, acento lima ácido `#B8F224`, ADN §4). No existe en el repo: se **clona** de
-  una demo hecha (odontología o restaurante) y se re-pela al nicho, igual que se hizo con restaurante.
+- **Estado en una línea:** **tres demos cerradas y commiteadas**, alineadas al ADN v2.2 — odontología
+  (clara/servicios/Bisturí), restaurante Rescoldo (oscura/carta-menú-digital/Mantel) y **concesionaria
+  Litoral Automotores** (oscura/catálogo/Motor, con **cotizador online**). La concesionaria además tiene
+  **repo privada standalone** en GitHub (`ShadoxIA/litoral-automotores-demo`). Skill aún no extraído.
+- **Tarea activa (próximo chat):** **desarrollar los paneles de administración reales, web por web, en
+  orden.** Hasta ahora los `/panel` son maquetas navegables sin backend (§7 del ADN). Empieza el segundo
+  producto: panel real con base de datos y login. Ver §7 y §8 para el detalle del arranque.
 - **Correr una demo:** `cd "demo-restaurante" && python -m http.server 8777` → `http://localhost:8777`.
   (Ya no hay `plato.html`: la demo también abre con doble clic; el server queda como recomendación, y para
   odontología igual.)
@@ -44,12 +44,12 @@ funciona. No construir el skill en abstracto.
 | Cosa | Estado |
 |---|---|
 | ADN del estilo (`estilo-umbral.md`) | **v2.2** — pulido contra la demo de odontología mirada en pantalla |
-| Demo #1 — Litoral Automotores (concesionaria, **web Motor**) | Hecha en un intento previo, **NO está en este repo**. Se **regenera** al ADN v2.2 → es la tarea del próximo chat |
 | Demo #2 — Ribera Odontología (`demo-odontologia/`) | **Cerrada y commiteada.** 9 páginas + panel. Encabezados internos con velo de acento (§3.2 del ADN) |
 | Demo #3 — Rescoldo (restaurante, `demo-restaurante/`) | **Cerrada y commiteada.** Menú digital: ficha en modal + pedido de delivery (comanda) → WhatsApp. 9 páginas + panel |
+| Demo #4 — Litoral Automotores (concesionaria, `demo-concesionaria/`) | **Cerrada y commiteada.** Piel Motor, núcleo **Catálogo** + **cotizador online** (permuta/venta/financiación). 9 páginas + panel. Ver §3.7 |
 | Todo funciona sin internet | **Sí** (fuentes locales, mapa condicional) |
-| Repo privada en GitHub | `ShadoxIA/sistemas-umbral-demos` — odontología y restaurante commiteadas |
-| Skill `demo-nicho` | **No empezado** — se extrae cuando haya 2+ demos alineadas al ADN |
+| Repo privada en GitHub | Monorepo `ShadoxIA/sistemas-umbral-demos` (las 3 demos) · **standalone** `ShadoxIA/litoral-automotores-demo` (solo la concesionaria) |
+| Skill `demo-nicho` | **No empezado** — 3 demos ya alineadas; se extrae después de los paneles |
 
 ---
 
@@ -127,6 +127,42 @@ subir foto) — no estaba en el alcance; y **~6-8 fotos reales extra** para que 
 
 ---
 
+## 3.7 Demo #4 (CERRADA): Litoral Automotores (concesionaria) — `demo-concesionaria/`
+
+Clonada de `demo-restaurante/` y re-pelada a la pareja **Motor** (Archivo Expanded 700 + Inter, en
+**MAYÚSCULAS**), base oscura, acento **lima ácido `#B8F224`**, movimiento **Alto** (48px · .45s · parallax
+en el hero). Núcleo **Catálogo** (ADN §2): grilla de fichas de auto (foto + precio + 3 datos año/km/caja)
+con **filtros combinados** (condición + tipo) y **ficha de detalle data-driven** `vehiculo.html?id=` (una
+sola página para todos los autos; anda con doble clic). 9 páginas + panel (Resumen / Consultas / **Stock**,
+sin Turnos: no es rubro de agenda). Se renombró `carta.html`→`catalogo.html`, `formas-pago.html`→
+`financiacion.html`, `reservas.html`→`cotiza.html`; se **agregó** `vehiculo.html`. Dropdown "Comensales"→**"Clientes"**.
+
+**Lo distintivo — el COTIZADOR** (`cotiza.html`, `cotizador()` en `main.js`): 3 modos —**permuta**,
+**vender**, **financiar**— que calculan **en la misma página** y terminan en WhatsApp con el número ya
+hecho. El usado se identifica por **marca + modelo + año + km** (desplegables dependientes marca→modelo);
+**el cliente NUNCA escribe el precio**. El número mostrado = **valor de un ejemplar impecable, SIN
+descontar margen** — un gancho generoso a propósito; el margen/regateo real es **presencial** (decisión de
+Ian). Financiación por sistema francés; permuta ofrece financiar el saldo. Parámetros TODOS en
+`negocio.js` bajo `cotizador` (tasa/CFT, plazos, depreciación por año, ajuste por km, y la tabla
+`estimador.marcas → modelos → valorBase` con el valor impecable de mercado). **Estos parámetros son lo que
+mañana configura el dueño desde el panel de admin** — es el gancho comercial del panel de este nicho.
+
+**Piel/velo (aprendido acá):** el lima es un acento **muy claro**. Como relleno (botones, tags, pastillas)
+lleva **texto oscuro** (`--primary-ink #10130A`), nunca blanco. Y el velo del hero **no** usa el lima
+brillante donde hay texto —lo mataría— sino el lima en su **peso hondo (olivo `#2B3908`)**; el lima vivo
+solo asoma en el borde derecho. Medido sobre foto+velo: titular 11.3, lead 11.6, lista 10.9/10.9/9.2,
+borde 4.9 — todo ≥4.5. Reseñas en Inter (un párrafo largo en la display ancha en mayúsculas no se lee).
+
+**Fotos:** 14 en `assets/img/` (Unsplash local, revisadas en mosaico): `hero`, `showroom`, `interior`,
+8 autos (`auto-*`), 3 retratos (`equipo-*`). Origen en `assets/data/creditos.json`. **QA por DOM** (no hay
+captura desde la sesión): 9 páginas + panel sin errores de consola, sin scroll-X a 375px, filtros/cotizador
+(3 modos)/ficha `?id`/burger/FAQ OK, íconos WA 3/3 con auricular, Archivo Expanded cargada local.
+
+**Pendiente:** juicio estético de Ian con capturas (colores, cortes de titular, cómo se ve el desglose del
+cotizador). Nada bloqueante.
+
+---
+
 ## 4. Decisiones cerradas (no rediscutir)
 
 1. **Firma visual** — mismo esqueleto, distinta piel. Estructura, efectos y ritmo fijos; cambian color, tipografía, fotos y tono.
@@ -141,7 +177,7 @@ subir foto) — no estaba en el alcance; y **~6-8 fotos reales extra** para que 
 10. **Contacto en las demos** — siempre los datos reales de Ian. El prospecto le escribe a él.
 11. **Todo tiene que andar sin internet.** Nada por link a un servidor ajeno.
 
-**Nichos hechos:** odontología, restaurante. **Candidatos que siguen:** inmobiliaria, gimnasio, turismo termal.
+**Nichos hechos:** odontología, restaurante, concesionaria. **Candidatos que siguen:** inmobiliaria, gimnasio, turismo termal.
 
 ---
 
@@ -186,12 +222,20 @@ pantalla, no el código. Cada una quedó como regla en el ADN:
 
 ## 7. Próximos pasos
 
-1. **Construir la demo del nicho concesionaria** (Litoral Automotores, web **Motor**) al ADN v2.2 — lo
-   inmediato. No está en el repo: **clonar** `demo-restaurante/` (o `demo-odontologia/`) a una carpeta nueva
-   y re-pelarla a la pareja **Motor** (Archivo Expanded + Inter, base oscura, acento lima `#B8F224`), con
-   núcleo **Catálogo** (grilla de fichas de auto con foto/precio/3 datos + filtros, ADN §2) y datos ficticios.
-2. **Extraer el skill `demo-nicho`** (con `skill-creator`), cuando haya 3 demos cerradas y alineadas al
-   mismo ADN. Debe encapsular: el ADN como referencia; el pipeline (piel por nicho → fotos Unsplash →
+1. **Desarrollar los paneles de administración reales, web por web, en orden** — lo inmediato y el foco de
+   los próximos chats. Hoy cada `/panel` es una **maqueta navegable sin backend** (ADN §7). Ahora se
+   construye el **panel real**: base de datos + login, que el dueño usa para gestionar su web.
+   - **Orden sugerido:** empezar por **la concesionaria** (`demo-concesionaria/`), porque su panel tiene el
+     gancho comercial más claro — **configurar el cotizador** (tasa/CFT, plazos, depreciación y la tabla
+     `estimador.marcas→modelos→valorBase`) y **el stock** (alta/baja/edición de autos, subir fotos), y ver
+     las **consultas** que entran. Todo eso hoy vive ficticio en `negocio.js` y en `panel.js`; el trabajo es
+     enchufarlo a datos reales que el dueño edita y la web lee.
+   - **Stack previsto (ver CLAUDE.md raíz):** Supabase (base + Auth), Cloudflare Workers, y la web pública
+     leyendo de ahí en vez de `negocio.js`. Definir con Ian: una instancia por web vs multi-tenant.
+   - **Regla de oro a mantener:** la web pública tiene que **seguir andando sin internet** para las demos.
+     El panel real es la capa que se activa cuando el negocio contrata; la demo local no puede romperse.
+2. **Extraer el skill `demo-nicho`** (con `skill-creator`) — hay 3 demos alineadas al ADN. Queda **después**
+   de los paneles. Debe encapsular: el ADN como referencia; el pipeline (piel por nicho → fotos Unsplash →
    revisión visual → datos ficticios → maquetado → QA anti-genérico); una demo como kernel; modos
    genérico / con brief de cliente.
 3. **Definir los planes comerciales.**
@@ -202,7 +246,8 @@ pantalla, no el código. Cada una quedó como regla en el ADN:
 
 - **Precio.** En `~/.claude/skills/propuestas/mi-negocio.md` figura "Sitios Web — desde USD 300". Lo que
   produce el skill (web + 8 páginas + panel + turnero) no entra en ese número y contradice el "no competir por precio".
-- **El panel real.** Requiere Supabase (base + login). Segundo producto, se construye cuando lo paguen.
+- **El panel real.** Requiere Supabase (base + login). Segundo producto. **Ya es la tarea activa (§7):** se
+  arranca web por web, empezando por la concesionaria (configurar cotizador + stock + consultas).
 - **Deploy.** Por ahora local, a pedido de Ian.
 - **Versión autocontenida para el celular.** Planteada, no decidida: un solo archivo (todo en una página
   con anclas) vs nueve autocontenidos (~20 MB). En notebook no hace falta nada: modo avión y doble clic anda.
