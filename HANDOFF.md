@@ -158,8 +158,9 @@ borde 4.9 — todo ≥4.5. Reseñas en Inter (un párrafo largo en la display an
 captura desde la sesión): 9 páginas + panel sin errores de consola, sin scroll-X a 375px, filtros/cotizador
 (3 modos)/ficha `?id`/burger/FAQ OK, íconos WA 3/3 con auricular, Archivo Expanded cargada local.
 
-**Pendiente:** juicio estético de Ian con capturas (colores, cortes de titular, cómo se ve el desglose del
-cotizador). Nada bloqueante.
+**Estética: aprobada por Ian** (19/08/2026 — miró la demo renderizada y le gustó). Sin pendientes.
+Nota: los colores/tipografía son de la demo; en un cliente real el acento sale de su logo (ADN §3–§4),
+así que no se pule la paleta de las demos por gusto.
 
 ---
 
